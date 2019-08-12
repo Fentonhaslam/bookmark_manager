@@ -43,10 +43,21 @@ postgres=# \q - quits
 postgres=# CREATE DATABASE "input name" - if you put username i.e. fentonhaslam, makes psql deploy automatically. 
 
 1. Connect to psql
-2. Create the database using the psql command CREATE DATABASE bookmark_manager;
+2. Create the database using the psql command CREATE DATABASE "bookmark_manager";
 3. Connect to the database using the pqsl command \c bookmark_manager;
 4. Run the query we have saved in the file 01_create_bookmarks_table.sql
+    
+Copy the line below into the new sql file. \/ \/ \/ 
+CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+
+rackup -p 3000
+
+to view bookmarks, navigate to 'localhost:3000/bookmarks'
 
 
-
+Using SELECT to view the table
+Using INSERT to add data to a table
+Using SELECT to query data
+Using DELETE to delete data
+Using UPDATE to update data
 
